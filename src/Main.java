@@ -1,15 +1,21 @@
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
-        Solution_1769 s = new Solution_1769();
+        Solution_1408 s = new Solution_1408();
 
-        String[] inputs = { "110", "001011" };
-        int[] answer;
+        String[][] inputs = {
+                { "mass", "as", "hero", "superhero" },
+                { "leetcode", "et", "code" },
+                { "blue", "green", "bu" }};
+        List<String> answer;
 
-        for (String test : inputs) {
-            answer = s.minOperations(test);
-            for (int i : answer) {
-                System.out.printf("%d ", i);
+        for (String[] test : inputs) {
+            answer = s.stringMatching(test);
+            for (String i : answer) {
+                System.out.printf("%s ", i);
             }
+
             System.out.println();
         }
     }
