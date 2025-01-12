@@ -2,21 +2,16 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Solution_1408 s = new Solution_1408();
+        Solution_2185 s = new Solution_2185();
 
         String[][] inputs = {
-                { "mass", "as", "hero", "superhero" },
-                { "leetcode", "et", "code" },
-                { "blue", "green", "bu" }};
-        List<String> answer;
+                { "pay", "attention", "practice", "attend" },
+                { "leetcode", "win", "loops", "success" } };
+        String[] prefixes = { "at", "code" };
 
-        for (String[] test : inputs) {
-            answer = s.stringMatching(test);
-            for (String i : answer) {
-                System.out.printf("%s ", i);
-            }
-
-            System.out.println();
+        for (int i = 0; i < inputs.length; i++) {
+            int answer = s.prefixCount(inputs[i], prefixes[i]);
+            System.out.println(answer);
         }
     }
 }

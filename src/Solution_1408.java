@@ -10,7 +10,7 @@ class Solution_1408 {
                 if (word1.length() >= word2.length()) {
                     continue;
                 }
-                if (word2.contains(word1)) {
+                if (kmp(word1, word2)) {
                     answer.add(word1);
                     break;
                 }
@@ -19,7 +19,7 @@ class Solution_1408 {
 
         return answer;
     }
-    
+
     public boolean kmp(String word1, String word2) {
         return false;
     }
