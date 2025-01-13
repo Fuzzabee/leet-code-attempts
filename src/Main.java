@@ -2,14 +2,15 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Solution_2116 sol = new Solution_2116();
+        Solution_3223 sol = new Solution_3223();
 
-        String[] s = { "))()))", "()()", ")" };
-        String[] locked = { "010100", "0000", "0" };
+        String[] s = {
+                "abaacbcbb",
+                "aa"
+        };
 
         for (int i = 0; i < s.length; i++) {
-            boolean answer = sol.canBeValid(s[i], locked[i]);
-            System.out.println(answer);
+            System.out.println(sol.minimumLength(s[i]));
         }
     }
 }
