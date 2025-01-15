@@ -2,21 +2,19 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Solution_2657 sol = new Solution_2657();
+        Solution_2429 sol = new Solution_2429();
 
-        int[][][] s = {
-            { {1,3,2,4}, {3,1,2,4} },
-            { {2,3,1}, {3,1,2} }
+        int[][] s = {
+            { 3, 5 },
+            { 1, 12 },
+            { 7, 2 },
+            { 65, 84 }
         };
 
-        for (int[][] i : s) {
-            int[] result = sol.findThePrefixCommonArray(i[0], i[1]);
+        for (int[] i : s) {
+            int result = sol.minimizeXor(i[0], i[1]);
 
-            for (int n : result) {
-                System.out.printf("%d ", n);
-            }
-
-            System.out.println();
+            System.out.printf("%d\n", result);
         }
     }
 }
