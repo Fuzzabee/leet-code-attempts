@@ -2,16 +2,18 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Solution_2658 sol = new Solution_2658();
+        Solution_1790 sol = new Solution_1790();
 
-        int[][][] s = {
-            { {0,2,1,0}, {4,0,0,3}, {1,0,0,4}, {0,3,2,0} },
-            { {1,0,0,0}, {0,0,0,0}, {0,0,0,0}, {0,0,0,1} },
-            { {4,0} }
+        String[][] s = {
+            { "bank", "kanb" },
+            { "attack", "defend" },
+            { "kelb", "kelb" },
+            { "aa", "bb" },
+            { "caa", "aaz"}
         };
 
-        for (int[][] i : s) {
-            int result = sol.findMaxFish(i);
+        for (String[] i : s) {
+            boolean result = sol.areAlmostEqual(i[0], i[1]);
 
             System.out.println(result);
         }
